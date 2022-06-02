@@ -1,0 +1,20 @@
+{
+    "name1" : {
+        "name":"Ruy Guzman",
+        "about": "Hello",
+        "img": "http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png",
+        "email": "ruy.guzman2002@gmail.com",
+        "phone": "3311698146",
+        "github": "https://github.com/Ruy-GC",
+        "linkedin": "https://www.linkedin.com/in/ruyguzmancamacho/"
+    },
+    "name2" : {
+        "name":"Michelle Lam ",
+        "about": "Hello",
+        "img": "http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png",
+        "email": "123",
+        "phone": "456",
+        "github": "123",
+        "linkedin": "456"
+    }
+}
