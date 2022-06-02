@@ -95,3 +95,11 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
+
+.margins {
+    margin-top: 10%;
+}
+
+.bg{
+    background-color: #f5f5f9;
+}
