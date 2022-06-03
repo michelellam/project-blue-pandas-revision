@@ -1,4 +1,5 @@
 import os
+from turtle import title
 from flask import Flask, render_template, request,json
 from dotenv import load_dotenv
 
@@ -9,4 +10,8 @@ data = json.load(open('./app/static/data.json'))
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="MEET THE TEAM!",user1 = data["name1"],user2 = data["name2"], url=os.getenv("URL"))
+    return render_template('index.html', title="MEET THE TEAM!",user1 = data["ruy"],user2 = data["michelle"], url=os.getenv("URL"))
+
+@app.route('/<user>')
+def homepage(user):
+    return render_template('home.html',title = data[user]["name"],user = data[user],url=os.getenv("URL"))

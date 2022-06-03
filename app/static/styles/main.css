@@ -3,7 +3,7 @@ p, h1, h2, h3, h4, h5, h6, button {
 }
 
 body {
-    background-color: #faf2db;
+    background-color: #ffffff;
     background-size: cover;
     width: auto; 
     overflow-x: hidden;
@@ -18,6 +18,8 @@ body {
     font-family: "Roboto", serif;
     font-weight: 700 !important;
     padding-top: 10px;
+    position: fixed;
+    z-index: 1;
 }
 
 .nav-content .logo-touch-target {
@@ -98,9 +100,9 @@ body {
 
 .member-card{
     text-align: center;
-    width: 200px;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 300px;
+    margin-left: 100px;
+    margin-right: 100px;
     margin-top: 5px;
     margin-bottom: 10px;
     display: inline-block;
@@ -108,7 +110,8 @@ body {
 
 .member{
     border-radius: 100%;
-    width: 200px;
+    width: 300px;
+    height: 300px;
     margin: 10px;
 }
 
@@ -127,6 +130,7 @@ body {
     margin: 15px;
     font-size: 18px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn-user:active{
@@ -135,5 +139,22 @@ body {
 }
 
 .btn-user:hover{
+    color: white;
     background-color: #c28080;
+}
+
+.home-overlay{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1d539f;
+}
+
+.presentation{
+    min-height: 600px;
+    background-image: url("../img/panda.jpg");
+    background-repeat: repeat;
+    background-color: #EC9D9D;
+    background-blend-mode: screen;
 }
