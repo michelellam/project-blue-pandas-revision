@@ -19,7 +19,7 @@ def education():
 
 @app.route("/hobbies")
 def hobbies():
-     return render_template("hobbies.jinja")
+     return render_template("hobbies.jinja", )
 
 @app.route("/workexperience")
 def workexperience():
