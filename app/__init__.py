@@ -12,6 +12,10 @@ data = json.load(open('./app/static/data.json'))
 def index():
     return render_template('index.jinja', title="MEET THE TEAM!",user1 = data["ruy"],user2 = data["michelle"], url=os.getenv("URL"))
 
+@app.route('/<user>')
+def homepage(user):
+    return render_template('home.jinja',title = data[user]["name"],user = data[user],url=os.getenv("URL"))
+
 #@app.route ("/")
 @app.route("/education")
 def education():
@@ -24,9 +28,6 @@ def hobbies():
      return render_template("hobbies.jinja", pics =[{"hobby1": "img/badminton.jpg", 
      "hobby2": "img/reading.jpg", "hobby3": "img/travel.jpg", "hobby4": "img/tennis.jpg"}, {"hobby1": "img/swimming.jpg", 
      "hobby2": "img/manga.jpg", "hobby3": "img/game.jpg", "hobby4": "img/workingout.jpg"}] )
-
-
-
 
 
 @app.route("/workexperience")
@@ -42,6 +43,4 @@ if __name__ == "__main__":
      app.run(debug = True)
 
 
-@app.route('/<user>')
-def homepage(user):
-    return render_template('home.jinja',title = data[user]["name"],user = data[user],url=os.getenv("URL"))
+
