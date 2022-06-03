@@ -2,10 +2,15 @@
 {% block title %} Our Education {% endblock %}
 {% block header %} OUR EDUCATION {% endblock %}
 
-{% block name %}<p class = "w3-padding-24"> Michelle's Education </p> {%endblock %}
-{% block education %} Binghamton University  {% endblock %} 
-{% block majors %}<p class="w3-margin-top"> Major: Computer Science </p>{% endblock %}
 
-{% block name2 %}<p class = "w3-padding-24">Ruy's Education </p> {% endblock %}
-{% block education2 %}<p class = "w3-margin-top">Tec de Monterrey</p> {% endblock %}
-{% block majors2 %}<p class = "w3-margin-top"> Major: Computer Science</p> {% endblock %}
+
+{% block name %}
+    {% for ed in educations %}
+        <p> {{ ed.name }}'s Education </p> 
+        <p> {{ ed.school }} </p>
+        <p> {{ ed.major }} </p>
+    {% endfor%}
+{% endblock%}
+
+
+

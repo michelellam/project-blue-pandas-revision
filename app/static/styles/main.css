@@ -103,3 +103,8 @@ body {
 .bg{
     background-color: #f5f5f9;
 }
+
+.underline{
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+}

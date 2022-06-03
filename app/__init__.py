@@ -13,7 +13,9 @@ def index():
 #@app.route ("/")
 @app.route("/education")
 def education():
-     return render_template("education.jinja")
+
+     return render_template("education.jinja", educations=[{"name": "Michelle","school": "Binghamton University", 
+      "major": "Computer Science"}, {"name": "Ruy", "school": "Tec de Monterrey", "major": "Computer Science" }] )
 
 @app.route("/hobbies")
 def hobbies():
