@@ -1,0 +1,16 @@
+{% extends "base.jinja" %}
+{% block title %} Our Education {% endblock %}
+{% block header %} OUR EDUCATION {% endblock %}
+
+
+
+{% block content %}
+    {% for ed in educations %}
+        <p class = "underline"> {{ ed.name }}'s Education </p> 
+        <p> {{ ed.school }} </p>
+        <p> {{ ed.major }} </p>
+    {% endfor%}
+{% endblock%}
+
+
+

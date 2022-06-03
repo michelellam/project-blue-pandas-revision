@@ -1,0 +1,21 @@
+
+{% extends "base.jinja"%}
+{% block title %} Work Experiences  {% endblock %}
+{% block header %} OUR WORK EXPERIENCES {% endblock %}
+
+
+{% block content%} 
+    {% for wks in work %}
+    <p class = "underline work_experience_font">{{wks.name2}}'s Work Experience 
+    <p><b> {{wks.company}}</b></p>
+    <p> {{wks.description}}</p>
+    <p><b> {{wks.company2}}</b></p>
+    <p>{{wks.description2}}</p>
+    <p><b> {{wks.company3}}</b></p>
+    <p>{{wks.description3}}</p>
+
+    {% endfor %}
+
+
+{%endblock%}
+

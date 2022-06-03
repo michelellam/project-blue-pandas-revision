@@ -1,0 +1,23 @@
+<!-- # template for work experiences, education, hobbies  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %} {% endblock %} </title>
+    </head>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-food.css">
+    <link rel="stylesheet" href="./static/styles/main.css">
+
+    <body>
+         <header class="w3-container w3-food-salmon w3-center">
+            <h1>{% block header %} {% endblock %} </h1>
+        </header>
+
+        <div class = "w3-center">{% block name %} {% endblock %} </div>
+
+        <div class = "w3-center"> {% block content %} {% endblock %} </div>
+    </body>
+
+</html>
