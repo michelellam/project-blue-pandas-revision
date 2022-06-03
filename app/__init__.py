@@ -10,7 +10,7 @@ data = json.load(open('./app/static/data.json'))
 
 @app.route('/')
 def index():
-    return render_template('index.html', title="MEET THE TEAM!",user1 = data["ruy"],user2 = data["michelle"], url=os.getenv("URL"))
+    return render_template('index.jinja', title="MEET THE TEAM!",user1 = data["ruy"],user2 = data["michelle"], url=os.getenv("URL"))
 
 @app.route('/<user>')
 def homepage(user):
