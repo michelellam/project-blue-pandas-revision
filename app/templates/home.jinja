@@ -1,4 +1,13 @@
+{% extends "base.jinja" %}
+{% block header %}About{% endblock %}
 
-{% for item in user %}
-    <h1>{{user[item]}}</h1>
-{% endfor %}
+{% block content %}
+<div class = "container">
+    <img src = "{{user['img']}}" class = "about-img"/>
+    <div class = "about-div">
+        <h1 class = "about-title">Who is {{ title }}?</h1>
+        <p class = "about-txt text-center">{{user['about']}}</p>
+    </div>    
+</div>
+   
+{% endblock %}
