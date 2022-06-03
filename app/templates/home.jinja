@@ -25,6 +25,8 @@
 
 
 <body>
-    <h1>{{user}}</h1>
+    {% for item in user %}
+    <h1>{{user[item]}}</h1>
+    {% endfor %}
 </body>
 </html>

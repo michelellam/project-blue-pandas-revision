@@ -14,4 +14,4 @@ def index():
 
 @app.route('/<user>')
 def homepage(user):
-    return render_template('home.html',title = data[user]["name"],user = data[user],url=os.getenv("URL"))
+    return render_template('home.jinja',title = data[user]["name"],user = data[user],url=os.getenv("URL"))
