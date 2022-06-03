@@ -19,7 +19,13 @@ def education():
 
 @app.route("/hobbies")
 def hobbies():
-     return render_template("hobbies.jinja" )
+     return render_template("hobbies.jinja", pics =[{"hobby1": "img/badminton.jpg", 
+     "hobby2": "img/reading.jpg", "hobby3": "img/travel.jpg", "hobby4": "img/tennis.jpg"}, {"hobby1": "img/swimming.jpg", 
+     "hobby2": "img/manga.jpg", "hobby3": "img/game.jpg", "hobby4": "img/workingout.jpg"}] )
+
+
+
+
 
 @app.route("/workexperience")
 def workexperience():

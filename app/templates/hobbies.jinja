@@ -10,7 +10,9 @@
 <div class="w3-col s6 bg w3-center underline"><p>RUY'S HOBBIES</p></div>
 </div> 
 
-<div class="w3-row">
+{% endblock %}
+
+{# <div class="w3-row">
 <div class="w3-col s6 bg w3-center"><img src="/static/img/badminton.jpg" width="300px" height="300px" ></div>
 <div class="w3-col s6 bg w3-center"><img src="/static/img/workingout.jpg" width="300px" height="300px" ></div>
 </div> 
@@ -33,7 +35,23 @@
 <div class="w3-row">
 <div class="w3-col s6 bg w3-center"><img src="/static/img/travel.jpg" width="300px" height="300px" ></div>
 <div class="w3-col s6 bg w3-center"><img src="/static/img/game.jpg" width="300px" height="300px" ></div>
-</div> 
+</div>  #}
+{# 
+src={{ url_for(“static”, filename=hobby.img) }}  #}
+
+{% block content %}
+    {% for pcs in pics%}
+        
+        <p class = "w3-col s6 bg w3-center"><img src = {{ url_for("static", filename = pcs.hobby1)}} style = width:300px;height:300px></p>
+        <p class = "w3-col s6 bg w3-center"><img src = {{ url_for ("static", filename = pcs.hobby2)}} style = width:300px;height:300px></p>
+        <p class = "w3-col s6 bg w3-center"><img src = {{ url_for ("static", filename = pcs.hobby3)}} style = width:300px;height:300px></p>
+        <p class = "w3-col s6 bg w3-center"><img src = {{ url_for ("static", filename = pcs.hobby4)}} style = width:300px;height:300px></p>
+
+
+
+    {% endfor %}
 
 {% endblock %}
+
+
 
