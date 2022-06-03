@@ -108,3 +108,7 @@ body {
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
 }
+
+.work_experience_font{
+    font-size: 300%
+}

@@ -4,5 +4,18 @@
 {% block header %} OUR WORK EXPERIENCES {% endblock %}
 
 
-{% block name %} Michelle's Work Experiences {% endblock %}
+{% block content%} 
+    {% for wks in work %}
+    <p class = "underline work_experience_font">{{wks.name2}}'s Work Experience 
+    <p> {{wks.company}}</p>
+    <p> {{wks.description}}</p>
+    <p> {{wks.company2}}</p>
+    <p>{{wks.description2}}</p>
+    <p> {{wks.company3}}</p>
+    <p>{{wks.description3}}</p>
+
+    {% endfor %}
+
+
+{%endblock%}
 
