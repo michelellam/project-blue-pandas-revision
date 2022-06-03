@@ -169,7 +169,7 @@ body {
 }
 
 .presentation{
-    min-height: 600px;
+    min-height: 400px;
     background-image: url("../img/panda.jpg");
     background-repeat: repeat;
     background-color: #EC9D9D;
