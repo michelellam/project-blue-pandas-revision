@@ -11,10 +11,31 @@
     "michelle" : {
         "name":"Michelle Lam ",
         "img": "../static/img/Michelle.jpg",
-        "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla urna nisl, accumsan non aliquam et, venenatis tincidunt ante. Integer in tincidunt ante. Praesent rhoncus urna id aliquam posuere. Integer porttitor congue tempor. Duis congue blandit enim, ut eleifend risus. Morbi hendrerit lorem in sapien condimentum, eget ullamcorper ex gravida. Nulla eget imperdiet nisl.",
-        "email": "123",
-        "phone": "456",
-        "github": "123",
-        "linkedin": "456"
+        "about": "Hello",
+        "email": "michellelamhelps@gmail.com",
+        "phone": "917-xxx-xxxx",
+        "github": "https://github.com/michelellam",
+        "linkedin": "https://www.linkedin.com/in/michelle-lam-446663233/",
+        "major": "Computer Science",
+        "school": "Binghamton University",
+        "companies":{
+            "0": "CS 110 Final Project",
+            "1": "MLH Fellowship",
+            "2": "Tutor"
+        },
+
+        "work_experiences":{
+            "0": "Using the pygame library to build a basic platform game",
+            "1": "Part of the Production Engineer Track under the mentorship of Meta Engineers",
+            "2": "Voluteer to tutor elementary students on math"
+        },
+
+        "hobbies_pics": {
+            "0":"/static/img/badminton.jpg", 
+            "1": "/static/img/reading.jpg", 
+            "2": "/static/img/travel.jpg",
+            "3": "/static/img/tennis.jpg",
+            "4": "/static/img/sleeping.jpg"
+        }
     }
 }
