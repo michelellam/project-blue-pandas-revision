@@ -4,27 +4,27 @@
 {% block content %}
 <div class = "container text-center">
     <center>
-        <img src = "{{user['img']}}" class = "img-fluid about-img"/>
+        <img src = "{{user_data['img']}}" class = "img-fluid about-img"/>
     </center>
     <div class = "about-div text-center">
         <h1 class = "about-title">Who is {{ title }}?</h1>
         <hr style="border: 2px solid black; background-color: black;"/>
-        <p class = "about-txt ">{{user['about']}}</p>
+        <p class = "about-txt ">{{user_data['about']}}</p>
     </div>
 
     <div class = "container contact-div text-center">
         <p class = "contact-item-p">
             <img src = "../static/img/email.png" style='vertical-align: middle; height: 30px'; /> 
-            {{user['email']}}
+            {{user_data['email']}}
         </p>
         <p class = "contact-item-p">
             <img src = "../static/img/phone.png" style='vertical-align: middle; height: 30px'; /> 
-            {{user['phone']}}
+            {{user_data['phone']}}
         </p>
-        <a href="{{user['github']}}" >
+        <a href="{{user_data['github']}}" >
             <img alt="github" src="../static/img/github.png" class = "contact-link"/>
         </a>
-        <a href="{{user['linkedin']}}" >
+        <a href="{{user_data['linkedin']}}" >
             <img alt="linkedin" src="../static/img/linkedin.png" class = "contact-link"/>
         </a>
     </div>
