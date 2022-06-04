@@ -16,10 +16,21 @@
     <title>{{ title }}</title>
 
     <body>
-         <header class="w3-container w3-food-salmon w3-center">
-            <h1>{% block header %} {% endblock %} </h1>
-        </header>
-
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EC9D9D;">
+            <a class="navbar-brand" href="/">Navbar</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">  
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/{{user}}">About</a>
+                    <a class="nav-item nav-link" href="/{{user}}/education">Education</a>
+                    <a class="nav-item nav-link" href="/{{user}}/workexperience">Experience</a>
+                    <a class="nav-item nav-link" href="/{{user}}/hobbies">Hobbies</a>
+                    <a class="nav-item nav-link" href="/{{user}}/trips">Trips</a>
+                </div>
+            </div>
+        </nav>
         <div class = "w3-center">{% block name %} {% endblock %} </div>
 
         <div class = "w3-center"> {% block content %} {% endblock %} </div>
