@@ -2,12 +2,32 @@
 {% block header %}About{% endblock %}
 
 {% block content %}
-<div class = "container">
-    <img src = "{{user['img']}}" class = "about-img"/>
-    <div class = "about-div">
+<div class = "container text-center">
+    <center>
+        <img src = "{{user['img']}}" class = "img-fluid about-img"/>
+    </center>
+    <div class = "about-div text-center">
         <h1 class = "about-title">Who is {{ title }}?</h1>
-        <p class = "about-txt text-center">{{user['about']}}</p>
-    </div>    
+        <hr style="border: 2px solid black; background-color: black;"/>
+        <p class = "about-txt ">{{user['about']}}</p>
+    </div>
+
+    <div class = "container contact-div text-center">
+        <p class = "contact-item-p">
+            <img src = "../static/img/email.png" style='vertical-align: middle; height: 30px'; /> 
+            {{user['email']}}
+        </p>
+        <p class = "contact-item-p">
+            <img src = "../static/img/phone.png" style='vertical-align: middle; height: 30px'; /> 
+            {{user['phone']}}
+        </p>
+        <a href="{{user['github']}}" >
+            <img alt="github" src="../static/img/github.png" class = "contact-link"/>
+        </a>
+        <a href="{{user['linkedin']}}" >
+            <img alt="linkedin" src="../static/img/linkedin.png" class = "contact-link"/>
+        </a>
+    </div>
 </div>
    
 {% endblock %}

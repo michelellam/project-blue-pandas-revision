@@ -1,0 +1,16 @@
+@media (max-width: 1200px) {
+    .about-img{
+        width: 300px;
+        height: auto;
+        float: none;
+        display: block;
+    }
+    .about-div{
+        display: block;
+        width: auto;
+        margin: 5%;
+    }
+    .contact-item-p{
+        font-size: 24px;
+    }
+}
