@@ -5,7 +5,31 @@
         "email": "ruy.guzman2002@gmail.com",
         "phone": "3311698146",
         "github": "https://github.com/Ruy-GC",
-        "linkedin": "https://www.linkedin.com/in/ruyguzmancamacho/"
+        "linkedin": "https://www.linkedin.com/in/ruyguzmancamacho/", 
+        "major": "Computer Science ", 
+        "school": "Tec de Monterrey",
+        "companies":{
+            "0": "El club de los abuelos",
+            "1": "Banco de Alimentos Guadalajara",
+            "2": "JANN (Jovenes ayudando a niñas y niños)"
+        },
+
+        "work_experiences":{
+            "0": "develop a full-stack web application oriented to keep track of their patients' health and examination procedures",
+            "1": "worked on the design of wireframes and system requirements of the web site of their branch Banco de Empleos Guadalajara",
+            "2": "free Math tutoring to kids from elementary and middle school"
+        },
+
+        "hobbies_pics":{
+            "0": "/static/img/swimming.jpg",
+            "1": "/static/img/manga.jpg",
+            "2": "/static/img/game.jpg",
+            "3": "/static/img/workingout.jpg",
+            "4": "/static/img/taekwondo.jpg"
+        }
+
+
+
     },
     "michelle" : {
         "name":"Michelle Lam ",
@@ -13,6 +37,29 @@
         "email": "michellelamhelps@gmail.com",
         "phone": "917-xxx-xxxx",
         "github": "https://github.com/michelellam",
-        "linkedin": "https://www.linkedin.com/in/michelle-lam-446663233/"
+        "linkedin": "https://www.linkedin.com/in/michelle-lam-446663233/",
+        "major": "Computer Science",
+        "school": "Binghamton University",
+        "companies":{
+            "0": "CS 110 Final Project",
+            "1": "MLH Fellowship",
+            "2": "Tutor"
+        },
+
+        "work_experiences":{
+            "0": "Using the pygame library to build a basic platform game",
+            "1": "Part of the Production Engineer Track under the mentorship of Meta Engineers",
+            "2": "Voluteer to tutor elementary students on math"
+        },
+
+        "hobbies_pics": {
+            "0":"/static/img/badminton.jpg", 
+            "1": "/static/img/reading.jpg", 
+            "2": "/static/img/travel.jpg",
+            "3": "/static/img/tennis.jpg",
+            "4": "/static/img/sleeping.jpg"
+        }
+
+
     }
 }

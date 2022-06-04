@@ -1,53 +1,18 @@
 {% extends "base.jinja" %}
 
-{% block title %} Our Hobbies {% endblock %}
+{% block title %} Hobbies {% endblock %}
 
-{% block header %} OUR HOBBIES {% endblock %}
+{% block header %} HOBBIES {% endblock %}
 
 {% block name %}
-<div class="w3-row margins ">
-<div class="w3-col s6 bg w3-center underline"><p>MICHELLE'S HOBBIES</p></div>
-<div class="w3-col s6 bg w3-center underline"><p>RUY'S HOBBIES</p></div>
-</div> 
+<div class = "underline"> {{title}}'s Hobbies! </div>
 
 {% endblock %}
 
-{# <div class="w3-row">
-<div class="w3-col s6 bg w3-center"><img src="/static/img/badminton.jpg" width="300px" height="300px" ></div>
-<div class="w3-col s6 bg w3-center"><img src="/static/img/workingout.jpg" width="300px" height="300px" ></div>
-</div> 
-
-<div class="w3-row">
-<div class="w3-col s6 bg w3-center"><img src="/static/img/sleeping.jpg" width="300px" height="300px" ></div>
-<div class="w3-col s6 bg w3-center"><img src="/static/img/swimming.jpg" width="300px" height="300px"></div>
-</div> 
-
-<div class="w3-row">
-<div class="w3-col s6 bg w3-center"><img src="/static/img/reading.jpg" width="300px" height="300px" ></div>
-<div class="w3-col s6 bg w3-center"><img src="/static/img/taekwondo.jpg" width="300px" height="300px" ></div>
-</div> 
-
-<div class="w3-row">
-<div class="w3-col s6 bg w3-center"><img src="/static/img/tennis.jpg" width="300px" height="300px"></div>
-<div class="w3-col s6 bg w3-center"><img src="/static/img/manga.jpg" width="300px" height="300px" ></div>
-</div> 
-
-<div class="w3-row">
-<div class="w3-col s6 bg w3-center"><img src="/static/img/travel.jpg" width="300px" height="300px" ></div>
-<div class="w3-col s6 bg w3-center"><img src="/static/img/game.jpg" width="300px" height="300px" ></div>
-</div>  #}
-{# 
-src={{ url_for(“static”, filename=hobby.img) }}  #}
-
 {% block content %}
+
     {% for pcs in pics%}
-        
-        <p class = "w3-col s6 bg w3-center"><img src = {{ url_for("static", filename = pcs.hobby1)}} style = width:300px;height:300px></p>
-        <p class = "w3-col s6 bg w3-center"><img src = {{ url_for ("static", filename = pcs.hobby2)}} style = width:300px;height:300px></p>
-        <p class = "w3-col s6 bg w3-center"><img src = {{ url_for ("static", filename = pcs.hobby3)}} style = width:300px;height:300px></p>
-        <p class = "w3-col s6 bg w3-center"><img src = {{ url_for ("static", filename = pcs.hobby4)}} style = width:300px;height:300px></p>
-
-
+        <img src = "{{pics[pcs]}}" width = "300" height = "300">
 
     {% endfor %}
 
