@@ -5,14 +5,14 @@
 
 {% block name %}
 
-<p class = "underline">{{title}}'s Work Experience!</p>
+<u class = "work_experience_font"><p>{{title}}'s Work Experience!</p></u>
 
 {% endblock%}
 
 {% block content%} 
 
     {% for wks in companies %}
-     <p><b> {{companies[wks]}}</b></p>
+     <p><b>{{companies[wks]}}</b></p>
      <p> {{workexperiences[wks]}}</p> 
     
 

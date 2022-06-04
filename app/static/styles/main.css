@@ -6,7 +6,7 @@ body {
     background-color: #ffffff;
     background-size: cover;
     width: auto; 
-    overflow-x: hidden;
+    overflow: hidden;
     font-family: "Poppins";
     margin: 0px;
 }
@@ -112,7 +112,7 @@ body {
 }
 
 .work_experience_font{
-    font-size: 300%
+    font-size: 130px;
 }
 
 .member-card{
