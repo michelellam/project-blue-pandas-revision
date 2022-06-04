@@ -1,4 +1,33 @@
+{% extends "base.jinja" %}
+{% block header %}About{% endblock %}
 
-{% for item in user %}
-    <h1>{{user[item]}}</h1>
-{% endfor %}
+{% block content %}
+<div class = "container text-center">
+    <center>
+        <img src = "{{user['img']}}" class = "img-fluid about-img"/>
+    </center>
+    <div class = "about-div text-center">
+        <h1 class = "about-title">Who is {{ title }}?</h1>
+        <hr style="border: 2px solid black; background-color: black;"/>
+        <p class = "about-txt ">{{user['about']}}</p>
+    </div>
+
+    <div class = "container contact-div text-center">
+        <p class = "contact-item-p">
+            <img src = "../static/img/email.png" style='vertical-align: middle; height: 30px'; /> 
+            {{user['email']}}
+        </p>
+        <p class = "contact-item-p">
+            <img src = "../static/img/phone.png" style='vertical-align: middle; height: 30px'; /> 
+            {{user['phone']}}
+        </p>
+        <a href="{{user['github']}}" >
+            <img alt="github" src="../static/img/github.png" class = "contact-link"/>
+        </a>
+        <a href="{{user['linkedin']}}" >
+            <img alt="linkedin" src="../static/img/linkedin.png" class = "contact-link"/>
+        </a>
+    </div>
+</div>
+   
+{% endblock %}
