@@ -31,6 +31,11 @@ def hobbies(user):
 def workexperience(user):
       return render_template("work_experience.jinja", title = data[user]["name"], companies = data[user]["companies"], workexperiences = data[user]["work_experiences"],user = user,url=os.getenv("URL"))
 
+@app.route("/<user>/trips")
+def trips(user):
+
+     return render_template("trips.jinja", title = data[user]["name"],user = user,trips = data[user]["trips"],url=os.getenv("URL"))
+
 if __name__ == "__main__":
      app.run(debug = True)
 

@@ -1,8 +1,37 @@
 {% extends "base.jinja" %}
 
+{% block map %} 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB0hnxtVIkSSrXsbYEPi-dcu-BDxD3rFg&callback=initMap" type="text/javascript"></script>
+    <script type="text/javascript">
+        function initMap() { 
+            // The location of Uluru
+            //const uluru = { lat: -25.344, lng: 131.031 };
+            // The map, centered at Uluru
+            {% for trip in trips%}
+            const {{trip}} = new google.maps.Map(document.getElementById("{{trip}}"), {
+                zoom: 4,
+                center: { lat: {{trips[trip]['lat']}}, lng:  {{trips[trip]['long']}} },
+            });
+
+            // The marker, positioned at Uluru
+            const {{trips[trip]['marker']}} = new google.maps.Marker({
+                position: { lat: {{trips[trip]['lat']}}, lng:  {{trips[trip]['long']}} },
+                map: {{trip}}
+            });
+            {% endfor %}
+        }
+    </script>
+
+
+{% endblock%}
+
 {% block content %}
 <div class = "container text-center">
-    
+    {% for trip in trips%}
+        <h2>{{trips[trip]['name']}}</h2>
+        <p>{{trips[trip]['description']}}</p>
+        <div class = "map" id="{{trip}}"></div>
+    {% endfor %}
 </div>
    
 {% endblock %}

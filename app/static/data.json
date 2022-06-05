@@ -27,6 +27,29 @@
             "2": "/static/img/game.jpg",
             "3": "/static/img/workingout.jpg",
             "4": "/static/img/taekwondo.jpg"
+        },
+        "trips":{
+            "trip_0": {
+                "name": "Toronto, Canada",
+                "marker": "toronto_marker",
+                "lat": 	43.651070,
+                "long": -79.347015,
+                "description": "Visited Toronto, Canada and other cities as part of my younger sister's birthday celebration. This vacation lasted for a week"
+            },
+            "trip_1": {
+                "name": "Orlando, Florida",
+                "marker": "orlando_marker",
+                "lat": 28.538336,
+                "long": -81.379234,
+                "description": "Went on Vacations to Orlando, Florida to visit Disney Land and Universal Studios "
+            },
+            "trip_2": {
+                "name": "Cancun, Quintana Roo",
+                "marker": "cancun_marker",
+                "lat": 21.17429,
+                "long": -86.84656,
+                "description": "Visited several times on summer vacations with my family"
+            }
         }
 
 
@@ -60,6 +83,30 @@
             "2": "/static/img/travel.jpg",
             "3": "/static/img/tennis.jpg",
             "4": "/static/img/sleeping.jpg"
+        },
+
+        "trips":{
+            "trip_0": {
+                "name": "Paris, France",
+                "marker": "paris_marker",
+                "lat": 	48.85341,
+                "long": 2.3488,
+                "description": "My french class was offering an exchange program to France! I was accustomed to their culture, improving my french, and was able to see Mona Lisa live! "
+            },
+            "trip_1": {
+                "name": "Boba Guys",
+                "marker": "boba_marker",
+                "lat": 40.72622280917157,
+                "long": -73.99874345997777,
+                "description": "The location of my favorite boba store. Totally recommend getting the strawberry matcha latte."
+            },
+            "trip_3": {
+                "name": "Binghamton University",
+                "marker": "binghamton_marker",
+                "lat": 42.089341376833616,
+                "long": -75.9691491213266,
+                "description": "The location of my university !"
+            }
         }
     }
 }
