@@ -1,23 +1,37 @@
 {% extends "base.jinja" %}
-{% block title %} Education {% endblock %}
-{% block header %} EDUCATION {% endblock %}
 
+{% block title %} Education {% endblock %}
 
 
 {% block content %}
 
-    <div class = "underline"> {{title}}'s Education </div>
+<h2 class = "w3-center">Education</h2>
 
-    <p> {{uni_name}} </p>
-    <p> {{majors}} </p>
-    <p class = "work_experience_font"> I was involved in.....</p>
+<hr class = "hr_education"></hr>
 
-    {% for wks in companies %}
-    
-        <p><b>{{companies[wks]}}</b></p>
-        <p> {{workexperiences[wks]}}</p> 
+<h4 class = "education_margin">college: {{uni_name}}</h4>
+
+<h4>major: {{majors}}</h4>
+
+
+<h2 class = "education_experience_heading_left w3-center">Work Experiences</h2>
+
+<hr class = "hr_education"></hr>
+
+    <div class = "row">
+
+    {% for wks in companies%}
+        <div class  = "education_experience_columns">
+
+            <h4 class = "w3-center education_margin">{{companies[wks]}}</h4>
+
+            <p class = "w3-center"> {{workexperiences[wks]}}</p>
+
+        </div>
 
     {% endfor %}
+
+    </div>
 
 {% endblock%}
 

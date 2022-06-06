@@ -112,7 +112,7 @@ body {
 }
 
 .work_experience_font{
-    font-size: 130px;
+    font-size: 50px;
 }
 
 .member-card{
@@ -251,3 +251,22 @@ body {
 .hobbies_shadowing{
     box-shadow: 5px 10px 8px 10px #888888;
 }
+
+.education_experience_columns{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.hr_education{
+    margin: auto;
+    width: 20%;
+    border-top: 5px solid red;
+}
+
+.education_margin{
+    margin-top:10px;
+}
+
+
+
