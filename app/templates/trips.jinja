@@ -4,14 +4,16 @@
 {% block map %} 
     <script async defer src="https://maps.googleapis.com/maps/api/js?key={{API}}&callback=initMap" type="text/javascript"></script>
     <script type="text/javascript">
-        function initMap() { 
+        function initMap() {
+            // generates a new map and marker for each object 
             {% for trip in trips%}
+            // Generates map on the coordinates fetched from the json
             const {{trip}} = new google.maps.Map(document.getElementById("{{trip}}"), {
                 zoom: 4,
                 center: { lat: {{trips[trip]['lat']}}, lng:  {{trips[trip]['long']}} },
             });
 
-            // The marker, positioned at Uluru
+            // Marker positioned at the selected location
             const {{trips[trip]['marker']}} = new google.maps.Marker({
                 position: { lat: {{trips[trip]['lat']}}, lng:  {{trips[trip]['long']}} },
                 map: {{trip}}
@@ -26,8 +28,9 @@
 {% block content %}
 <div class = "container text-center">
     <h1 class = "about-title">{{title}}'s Favorite places</h1>
-    <hr style="border: 2px solid black; background-color: black;"/>
+    <hr style="border: 2px solid red; background-color: red;"/>
 
+        <!-- displays a new map and marker for each location -->
         {% for trip in trips%}
             <div class = "container map-container">
                 <h2 class = "trips-h2">{{trips[trip]['name']}}</h2>

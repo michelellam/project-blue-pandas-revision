@@ -8,8 +8,11 @@
     <h1 class = "about-title">{{title}}'s Hobbies</h1>
     <hr style="border: 2px solid black; background-color: black;"/>
     <center>
+        <!-- defines row layout -->
         <div class = "row">
+            <!-- creates a card for every object found -->
             {% for a in pics%}
+                <!-- defines columns-->
                 <div class = " col-sm-12 col-lg-4"> 
                     <div class = "card hobbies_shadowing margins">
                         <img src = "{{pics[a]}}" class = "hobbies-img">
