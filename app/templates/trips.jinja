@@ -1,0 +1,41 @@
+{% extends "base.jinja" %}
+{% block title %}Trips{% endblock %}
+
+{% block map %} 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB0hnxtVIkSSrXsbYEPi-dcu-BDxD3rFg&callback=initMap" type="text/javascript"></script>
+    <script type="text/javascript">
+        function initMap() { 
+            {% for trip in trips%}
+            const {{trip}} = new google.maps.Map(document.getElementById("{{trip}}"), {
+                zoom: 4,
+                center: { lat: {{trips[trip]['lat']}}, lng:  {{trips[trip]['long']}} },
+            });
+
+            // The marker, positioned at Uluru
+            const {{trips[trip]['marker']}} = new google.maps.Marker({
+                position: { lat: {{trips[trip]['lat']}}, lng:  {{trips[trip]['long']}} },
+                map: {{trip}}
+            });
+            {% endfor %}
+        }
+    </script>
+
+
+{% endblock%}
+
+{% block content %}
+<div class = "container text-center">
+    <h1 class = "about-title">{{title}}'s Favorite trips</h1>
+    <hr style="border: 2px solid black; background-color: black;"/>
+
+        {% for trip in trips%}
+            <div class = "container map-container">
+                <h2 class = "trips-h2">{{trips[trip]['name']}}</h2>
+                <p class = "trips-txt">{{trips[trip]['description']}}</p>
+                <div class = "map" id="{{trip}}"></div>
+            </div>
+        {% endfor %}
+    
+</div>
+   
+{% endblock %}
