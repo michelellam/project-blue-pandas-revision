@@ -1,12 +1,11 @@
 p, h1, h2, h3, h4, h5, h6, button {
-    font-family: "Roboto", serif;
+    font-family: "Poppins";
 }
 
 body {
     background-color: #ffffff;
     background-size: cover;
     width: auto; 
-    overflow: hidden;
     font-family: "Poppins";
     margin: 0px;
 }
@@ -15,11 +14,12 @@ body {
     width: 100%;
     display: inline-block;
     background-color: #EC9D9D;
-    font-family: "Roboto", serif;
+    font-family: "Poppins";
     font-weight: 700 !important;
     padding-top: 10px;
     position: fixed;
     z-index: 1;
+    margin-top: -60px;
 }
 
 .nav-content .logo-touch-target {
@@ -99,7 +99,7 @@ body {
 }
 
 .margins {
-    margin-top: 20px;
+    margin-top: 10%;
 }
 
 .bg{
@@ -112,14 +112,13 @@ body {
 }
 
 .work_experience_font{
-    font-size: 30px;
+    font-size: 130px;
 }
 
 .member-card{
     text-align: center;
     width: 300px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 10%;
     margin-top: 5px;
     margin-bottom: 10px;
     display: inline-block;
@@ -132,6 +131,9 @@ body {
     margin: 10px;
 }
 
+.members{
+    margin-bottom: 20px;
+}
 .team-desc{
     margin: 3%;
     font-size: 18px;
@@ -162,14 +164,15 @@ body {
 
 .home-overlay{
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #1d539f;
 }
 
 .presentation{
-    min-height: 600px;
+    min-height: 400px;
+    margin-top: 60px;
     background-image: url("../img/panda.jpg");
     background-repeat: repeat;
     background-color: #EC9D9D;
@@ -248,4 +251,3 @@ body {
 .hobbies_shadowing{
     box-shadow: 5px 10px 8px 10px #888888;
 }
-
