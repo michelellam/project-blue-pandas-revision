@@ -10,6 +10,14 @@
 
     <p> {{uni_name}} </p>
     <p> {{majors}} </p>
+    <p class = "work_experience_font"> I was involved in.....</p>
+
+    {% for wks in companies %}
+    
+        <p><b>{{companies[wks]}}</b></p>
+        <p> {{workexperiences[wks]}}</p> 
+
+    {% endfor %}
 
 {% endblock%}
 

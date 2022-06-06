@@ -5,16 +5,27 @@
 {% block header %} HOBBIES {% endblock %}
 
 {% block name %}
-<div class = "underline"> {{title}}'s Hobbies! </div>
+<div class = "underline work_experience_font"> {{title}}'s Hobbies! </div>
 
 {% endblock %}
 
 {% block content %}
 
-    {% for pcs in pics%}
-        <img src = "{{pics[pcs]}}" width = "300" height = "300">
-
+<div class = "row">
+    {% for a in pics%}
+        <div class = " col-sm-12 col-lg-4"> 
+            <div class = "card hobbies_shadowing margins" style = "width: 300px;">
+                <img src = "{{pics[a]}}" class = "card-img-top">
+                <div class = "card-body ">
+                    <h4 class = "card-title">{{hobbies_name[a]}}</h4>
+                <p class = "card-text">{{hobbies_memos[a]}}</p></div>
+            </div>
+        </div>
     {% endfor %}
+    </div>
+</div>
+
+
 
 {% endblock %}
 
