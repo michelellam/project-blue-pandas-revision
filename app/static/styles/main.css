@@ -247,3 +247,7 @@ body {
     font-size: 32px;
     text-decoration: underline black;
 }
+
+.hobbies_shadowing{
+    box-shadow: 5px 10px 8px 10px #888888;
+}
