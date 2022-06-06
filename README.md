@@ -1,79 +1,104 @@
 # Production Engineering - Week 1 - Portfolio Site
 
-Welcome to the MLH Fellowship! During Week 1, you'll be working with Flask to build a portfolio site. This site will be the foundation for activities we do in future weeks so spend time this week making it your own and reflect your personality!
+Welcome to the portfolio site for the Blue Pandas team from the Summer 2022 production engineering pod 18!
 
-## Tasks
+This portfolio site is the result of the work done during week 1 of the fellowship, developed by:
 
-Once you've got your portfolio downloaded and running using the instructions below, you should attempt to complete the following tasks.
+- [Ruy Guzmán Camacho](https://github.com/Ruy-GC)
+- [Michelle Lam](https://github.com/michelellam)
 
-For each of these tasks, you should create an [Issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) and work on them in a new [branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches). When the task has been completed, you should open a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) and get another fellow in your pod to give you feedback before merging it in.
+## Goals and Inspiration
+The project´s goal is to work as a tool to get to now better the members of a team in a personal and professional way, oriented mainly to be a template for future teams and/or individuals.
 
-*Note: Make sure to include a link to the Issue you're working on inside of your Pull Request so your reviewer knows what you're working on!*
+The design of the website was inspired by a minimalistic perspective, looking always to show the essential following the philosophy of "less is more".
 
-### GitHub Tasks
-- [x] Create Issues for each task below
-- [x] Work on each task in a new branch
-- [x] Open a Pull Request when a task is finished to get feedback
+## Technologies
 
-### Portfolio Tasks
-- [x] Add a photo of yourself to the website
-- [x] Add an "About youself" section to the website.
-- [x] Add your previous work experiences
-- [x] Add your hobbies (including images)
-- [x] Add your current/previous education
-- [x] Add a map of all the cool locations/countries you visited
+Flask
+- As the main framework
 
-### Flask Tasks
-- [x] Get your Flask app running locally on your machine using the instructions below.
-- [x] Add a template for adding multiple work experiences/education/hobbies using [Jinja](https://jinja.palletsprojects.com/en/3.0.x/api/#basics)
-- [x] Create a new page to display hobbies.
-- [x] Add a menu bar that dynamically displays other pages in the app
+Jinja
+- For the creation of web templates that are able to implement python code.
 
+HTML & CSS
+- Structure and styling
 
-## Getting Started
+Other tools used were github for version control and figma for the UI design. 
 
-You don't need to submit any pull requests to thie repository. You need to do all your work here.
+## Main Challenges
+None of the members of the team had used Flask and Jinja before so it became a continuos learning process. 
 
-## Installation
+- How to implement jinja templates and extend from other files
+- Understanding how the blocks worked to show diferent information using the same files
+- Create a responsive UI to make sure our site looks good in any device
 
-Make sure you have python3 and pip installed
+## What we acomplished and learned
+We were able to build an portfolio that we're proud of, some of the most important achievements are:
 
-Create and activate virtual environment using virtualenv
-```bash
-$ python -m venv python3-virtualenv
-$ source python3-virtualenv/bin/activate
-```
+- Implementation of the Google Maps API for the PLaces page
+- Dynamic rendering of the information using data from a JSON and routing parameters
+- Proficient colaboration within the team and grat comunication
+- Being able to quickly learn how tu use Flask and Jinja
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies!
-
-```bash
+## Installing and running
+### Instalation
+``` bash
+python -m venv python3-virtualenv
+python3-virtualenv/Scripts/activate 
 pip install -r requirements.txt
 ```
 
-## Usage
-
-Create a .env file using the example.env template (make a copy using the variables inside of the template)
-
-Start flask development server
-```bash
-$ export FLASK_ENV=development
-$ flask run
+### Run
+``` bash
+python3-virtualenv/Scripts/activate 
+flask run
 ```
 
-You should get a response like this in the terminal:
+## Example of Jinja templates imlementation
+In base.jinja you'll have the html setup and multiple blocks for content and other data, this blocks can be implemented in any part of the HTML structure. Fo example to fill th body of the HTML file we can do the following:
+
+``` HTML
+...
+<body>
+    <div> {% block content %} {% endblock %} </div>
+</body>
+...
 ```
-❯ flask run
- * Environment: development
- * Debug mode: on
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+
+Then on the file that extends our base.jinja we can set that content.
+
+``` HTML
+{% extends "base.jinja" %}
+
+{% block content %}
+
+    <div class = "container">
+        <h1 class = "about-title">{{title}}'s background</h1>
+        <hr style="border: 2px solid red; background-color: red;"/>
+
+        <h2 class = "w3-center" style = "margin-top:50px;">Education</h2>
+        <hr class = "hr_education"></hr>
+
+        <h4 class = "education_margin">{{uni_name}}</h4>
+        <h4>Currently studying a major in {{majors}}</h4>
+
+        <h2 class = "education_experience_heading_left w3-center" style = "margin-top:50px;">Work Experiences</h2>
+        <hr class = "hr_education"></hr>
+
+            <!-- row layout -->
+            <div class = "row" >
+            <!-- generates a card for each experience
+            {% for wks in companies%}
+                <!-- defines column layout -->
+                <div class  = "education_experience_columns">
+                    <h4 class = "w3-center education_margin">{{companies[wks]}}</h4>
+                    <p class = "w3-center"> {{workexperiences[wks]}}</p>
+                </div>
+            {% endfor %}
+
+            </div>
+    </div>
+
+{% endblock%}
 ```
 
-You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000` in the browser! 
-
-*Note: The portfolio site will only work on your local machine while you have it running inside of your terminal. We'll go through how to host it in the cloud in the next few weeks!* 
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
