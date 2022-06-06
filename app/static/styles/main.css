@@ -99,7 +99,7 @@ body {
 }
 
 .margins {
-    margin-top: 10%;
+    margin-top: 20px;
 }
 
 .bg{
@@ -112,7 +112,7 @@ body {
 }
 
 .work_experience_font{
-    font-size: 130px;
+    font-size: 30px;
 }
 
 .member-card{
@@ -175,3 +175,8 @@ body {
     background-color: #EC9D9D;
     background-blend-mode: screen;
 }
+
+.hobbies_shadowing{
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+

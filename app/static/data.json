@@ -26,7 +26,24 @@
             "2": "/static/img/game.jpg",
             "3": "/static/img/workingout.jpg",
             "4": "/static/img/taekwondo.jpg"
-        }
+        },
+
+        "hobbies_description":{
+            "0": "swimming",
+            "1": "manga",
+            "2": "game", 
+            "3": "working out", 
+            "4": "taekwondo"
+         }, 
+
+         "hobbies_notes":{
+            "0": "Twice a week, trying to pick up my old habit ",
+            "1": "Love to read/watch action, comedy and romance stories",
+            "2": "Been enjoying it since I was a kid, almost any kind", 
+            "3": "4 times a week, always trying to improve",
+            "4": "Been training since I was a kid and I'm currently first degree black belt"
+
+         }
 
 
 
@@ -52,12 +69,27 @@
             "2": "Voluteer to tutor elementary students on math"
         },
 
-        "hobbies_pics": {
+        "hobbies_pics":{
             "0":"/static/img/badminton.jpg", 
             "1": "/static/img/reading.jpg", 
             "2": "/static/img/travel.jpg",
             "3": "/static/img/tennis.jpg",
             "4": "/static/img/sleeping.jpg"
+        },
+        "hobbies_description":{
+            "0": "badminton",
+            "1": "reading",
+            "2": "travel", 
+            "3": "tennis", 
+            "4": "sleeping"
+        },
+
+        "hobbies_notes":{
+            "0": "Not the best at it, but I like to play it whenever my parents are free", 
+            "1": "Loved reading ever since I was young, it always helps me to calm down", 
+            "2": "Always excited to visit new places whenever I have the chance to", 
+            "3": "Played during my middle and high school years",
+            "4": "This should be a given."
         }
 
 
