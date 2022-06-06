@@ -251,3 +251,10 @@ body {
 .hobbies_shadowing{
     box-shadow: 5px 10px 8px 10px #888888;
 }
+
+.education_experience_columns{
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
