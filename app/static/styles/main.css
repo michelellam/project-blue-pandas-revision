@@ -280,3 +280,10 @@ body {
 
 
 
+footer {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color: rgb(47, 47, 47);
+    color: white;
+}
