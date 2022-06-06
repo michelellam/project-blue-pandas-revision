@@ -1,6 +1,6 @@
 {
     "ruy" : {
-        "name":"Ruy Guzman",
+        "name":"Ruy Guzm&aacuten",
         "img": "../static/img/Ruy.jpg",
         "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla urna nisl, accumsan non aliquam et, venenatis tincidunt ante. Integer in tincidunt ante. Praesent rhoncus urna id aliquam posuere. Integer porttitor congue tempor. Duis congue blandit enim, ut eleifend risus. Morbi hendrerit lorem in sapien condimentum, eget ullamcorper ex gravida. Nulla eget imperdiet nisl.",
         "email": "ruy.guzman2002@gmail.com",
@@ -12,13 +12,13 @@
         "companies":{
             "0": "El club de los abuelos",
             "1": "Banco de Alimentos Guadalajara",
-            "2": "JANN (Jovenes ayudando a niñas y niños)"
+            "2": "JANN (Jovenes ayudando a ni&ntildeas y ni&ntildeos)"
         },
 
         "work_experiences":{
-            "0": "develop a full-stack web application oriented to keep track of their patients' health and examination procedures",
-            "1": "worked on the design of wireframes and system requirements of the web site of their branch Banco de Empleos Guadalajara",
-            "2": "free Math tutoring to kids from elementary and middle school"
+            "0": "Developed a full-stack web application oriented to keep track of their patients' health and examination procedures",
+            "1": "Worked on the design of wireframes and system requirements of the web site of their branch Banco de Empleos Guadalajara",
+            "2": "Free Math tutoring to kids from elementary and middle school"
         },
 
         "hobbies_pics":{
@@ -30,11 +30,11 @@
         },
         
         "hobbies_description":{
-            "0": "swimming",
-            "1": "manga",
-            "2": "game", 
-            "3": "working out", 
-            "4": "taekwondo"
+            "0": "Swimming",
+            "1": "Manga",
+            "2": "Gaming", 
+            "3": "Working out", 
+            "4": "Taekwondo"
          }, 
 
          "hobbies_notes":{
@@ -103,11 +103,11 @@
             "4": "/static/img/sleeping.jpg"
         },
         "hobbies_description":{
-            "0": "badminton",
-            "1": "reading",
-            "2": "travel", 
-            "3": "tennis", 
-            "4": "sleeping"
+            "0": "Badminton",
+            "1": "Reading",
+            "2": "Traveling", 
+            "3": "Tennis", 
+            "4": "Sleeping"
         },
 
         "hobbies_notes":{

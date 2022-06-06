@@ -5,32 +5,31 @@
 
 {% block content %}
 
-<h2 class = "w3-center">Education</h2>
+    <div class = "container">
+        <h1 class = "about-title">{{title}}'s background</h1>
+        <hr style="border: 2px solid red; background-color: red;"/>
 
-<hr class = "hr_education"></hr>
+        <h2 class = "w3-center" style = "margin-top:50px;">Education</h2>
+        <hr class = "hr_education"></hr>
 
-<h4 class = "education_margin">college: {{uni_name}}</h4>
+        <h4 class = "education_margin">{{uni_name}}</h4>
+        <h4>Currently studying a major in {{majors}}</h4>
 
-<h4>major: {{majors}}</h4>
+        <h2 class = "education_experience_heading_left w3-center" style = "margin-top:50px;">Work Experiences</h2>
+        <hr class = "hr_education"></hr>
 
+            <!-- row layout -->
+            <div class = "row" >
+            <!-- generates a card for each experience
+            {% for wks in companies%}
+                <!-- defines column layout -->
+                <div class  = "education_experience_columns">
+                    <h4 class = "w3-center education_margin">{{companies[wks]}}</h4>
+                    <p class = "w3-center"> {{workexperiences[wks]}}</p>
+                </div>
+            {% endfor %}
 
-<h2 class = "education_experience_heading_left w3-center">Work Experiences</h2>
-
-<hr class = "hr_education"></hr>
-
-    <div class = "row">
-
-    {% for wks in companies%}
-        <div class  = "education_experience_columns">
-
-            <h4 class = "w3-center education_margin">{{companies[wks]}}</h4>
-
-            <p class = "w3-center"> {{workexperiences[wks]}}</p>
-
-        </div>
-
-    {% endfor %}
-
+            </div>
     </div>
 
 {% endblock%}
