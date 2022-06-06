@@ -19,12 +19,12 @@ def homepage(user):
 @app.route("/<user>/educationexperience")
 def education(user):
 
-     return render_template("education_experience.jinja",  title = data[user]["name"], majors = data[user]["major"], uni_name = data[user]["school"],companies = data[user]["companies"], workexperiences = data[user]["work_experiences"] )
+     return render_template("education_experience.jinja",  title = data[user]["name"], majors = data[user]["major"], uni_name = data[user]["school"],companies = data[user]["companies"], workexperiences = data[user]["work_experiences"],user = user,url=os.getenv("URL"))
 
 @app.route("/<user>/hobbies")
 def hobbies(user):
 
-     return render_template("hobbies.jinja", title = data[user]["name"], pics = data[user]["hobbies_pics"], hobbies_name = data[user]["hobbies_description"], hobbies_memos = data[user]["hobbies_notes"])
+     return render_template("hobbies.jinja", title = data[user]["name"], pics = data[user]["hobbies_pics"], hobbies_name = data[user]["hobbies_description"], hobbies_memos = data[user]["hobbies_notes"],user = user,url=os.getenv("URL"))
 
 @app.route("/<user>/trips")
 def trips(user):
