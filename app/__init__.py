@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, request,json
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv("development.env")
 app = Flask(__name__, template_folder='templates')
 
 data = json.load(open('./app/static/data.json'))
@@ -29,7 +29,7 @@ def hobbies(user):
 @app.route("/<user>/trips")
 def trips(user):
 
-     return render_template("trips.jinja", title = data[user]["name"],user = user,trips = data[user]["trips"],url=os.getenv("URL"))
+     return render_template("trips.jinja", title = data[user]["name"],user = user,trips = data[user]["trips"],url=os.getenv("URL"),API = os.getenv("API"))
 
 
 if __name__ == "__main__":
