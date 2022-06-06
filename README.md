@@ -26,7 +26,7 @@ HTML & CSS
 Other tools used were github for version control and figma for the UI design. 
 
 ## Main Challenges
-None of the members of the team had used Flask and Jinja before so it became a continuos learning process. 
+None of the members of the team had used Flask and Jinja before so it became a continuous learning process. 
 
 - How to implement jinja templates and extend from other files
 - Understanding how the blocks worked to show diferent information using the same files
@@ -35,10 +35,10 @@ None of the members of the team had used Flask and Jinja before so it became a c
 ## What we acomplished and learned
 We were able to build an portfolio that we're proud of, some of the most important achievements are:
 
-- Implementation of the Google Maps API for the PLaces page
+- Implementation of the Google Maps API for the Places page
 - Dynamic rendering of the information using data from a JSON and routing parameters
-- Proficient colaboration within the team and grat comunication
-- Being able to quickly learn how tu use Flask and Jinja
+- Proficient collaboration within the team and great comunication
+- Being able to quickly learn how to use Flask and Jinja
 
 ## Installing and running
 ### Instalation
