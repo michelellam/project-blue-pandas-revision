@@ -58,7 +58,7 @@
     "michelle" : {
         "name":"Michelle Lam ",
         "img": "../static/img/Michelle.jpg",
-        "about": "Hello",
+        "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla urna nisl, accumsan non aliquam et, venenatis tincidunt ante. Integer in tincidunt ante. Praesent rhoncus urna id aliquam posuere. Integer porttitor congue tempor. Duis congue blandit enim, ut eleifend risus. Morbi hendrerit lorem in sapien condimentum, eget ullamcorper ex gravida. Nulla eget imperdiet nisl.",
         "email": "michellelamhelps@gmail.com",
         "phone": "917-xxx-xxxx",
         "github": "https://github.com/michelellam",
