@@ -3,15 +3,17 @@
 
 {% block content %}
 <div class = "container text-center">
+    <!-- User information and picture -->
     <center>
         <img src = "{{user_data['img']}}" class = "img-fluid about-img"/>
     </center>
     <div class = "about-div text-center">
         <h1 class = "about-title">Who is {{ title }}?</h1>
-        <hr style="border: 2px solid black; background-color: black;"/>
+        <hr style="border: 2px solid red; background-color: red;"/>
         <p class = "about-txt ">{{user_data['about']}}</p>
     </div>
 
+    <!-- Contact information and links to social media-->
     <div class = "container contact-div text-center">
         <p class = "contact-item-p">
             <img src = "../static/img/email.png" style='vertical-align: middle; height: 30px'; /> 
