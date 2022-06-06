@@ -3,22 +3,18 @@
 {% block header %} EDUCATION {% endblock %}
 
 
-
 {% block content %}
 
-    <div class = "underline"> {{title}}'s Education </div>
 
-    <p> {{uni_name}} </p>
-    <p> {{majors}} </p>
-    <p class = "work_experience_font"> I was involved in.....</p>
 
-    {% for wks in companies %}
-    
-        <p><b>{{companies[wks]}}</b></p>
-        <p> {{workexperiences[wks]}}</p> 
-
+    <div class = "row">
+    {% for wks in companies%}
+        <div class  = "education_experience_columns">
+            <h2 class = "w3-center">{{companies[wks]}}</h2>
+            <p class = "w3-center"> {{workexperiences[wks]}}</p>
+        </div>
     {% endfor %}
-
+    </div>
 {% endblock%}
 
 
