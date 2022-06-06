@@ -31,6 +31,7 @@ def trips(user):
 
      return render_template("trips.jinja", title = data[user]["name"],user = user,trips = data[user]["trips"],url=os.getenv("URL"))
 
+
 if __name__ == "__main__":
      app.run(debug = True)
 

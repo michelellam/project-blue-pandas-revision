@@ -28,6 +28,7 @@
             "3": "/static/img/workingout.jpg",
             "4": "/static/img/taekwondo.jpg"
         },
+        
         "hobbies_description":{
             "0": "swimming",
             "1": "manga",
@@ -116,6 +117,7 @@
             "3": "Played during my middle and high school years",
             "4": "This should be a given."
         },
+
         "trips":{
             "trip_0": {
                 "name": "Paris, France",
