@@ -258,8 +258,14 @@ body {
     padding: 10px;
 }
 
-.education_experience_heading_left{
-    text-align: left;
+.hr_education{
+    margin: auto;
+    width: 20%;
+    border-top: 5px solid red;
+}
+
+.education_margin{
+    margin-top:10px;
 }
 
 
