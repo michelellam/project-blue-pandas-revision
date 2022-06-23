@@ -6,7 +6,7 @@ import datetime
 from playhouse.shortcuts import model_to_dict
 
 load_dotenv("development.env")
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, template_folder='template')
 
 data = json.load(open('./app/static/data.json'))
 
@@ -76,6 +76,9 @@ def get_time_line_post():
 TimelinePost.select().order_by(TimelinePost.created_at.desc())
           ]
      }
+@app.route('/timeline')
+def timeline():
+     return render_template("timeline.jinja")
 
 
 if __name__ == "__main__":

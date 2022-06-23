@@ -1,0 +1,45 @@
+{% extends "base.jinja" %}
+
+{% block title %} Timeline {% endblock %} 
+
+{% block content %}
+
+<form>
+    <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">email:</label>
+    <input type="text" id="email" name="email"><br><br>
+    <label for="content">content:</label>
+    <input type="text" id="content" name="content"><br><br>
+    <input type="submit" value="submit">
+    </div>
+
+</form>
+
+<div>
+    <ol id="id"></ol>
+</div>
+
+
+<script>
+const form = document.querySelector("form")
+form.addEventListener("submit", e=>{
+    e.preventDefault();
+    const formData = new FormData(e.target)
+
+    fetch("/api/timeline_post", {method: "POST" , body: formData})
+    fetch("/api/timeline_post")
+        .then(response => response.json().then(json => {
+            json = json['timeline_posts']
+            const table = document.querySelector("#id")
+            json.forEach(e => {
+                let li = document.createElement('li')
+                li.textContent = `${e.content}, ${e.name}, ${e.created_at}, ${e.email}`
+                table.appendChild(li)
+            })}))
+    })
+
+</script>
+
+{% endblock %}
