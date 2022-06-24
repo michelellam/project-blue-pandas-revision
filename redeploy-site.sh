@@ -1,7 +1,5 @@
 #!/bin/bash 
 
-#kill all tmux sessions
-tmux kill-server
 
 #cd into our project folder
 cd project-blue-pandas-revision-2
@@ -16,5 +14,6 @@ source python3-virtualenv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt 
 
-#detached tmux + enters the flask environment 
-tmux new -d "flask run --host=0.0.0.0"
+##restart the service + checking up the status
+systemctl restart myportfolio
+systemctl status myportfolio
