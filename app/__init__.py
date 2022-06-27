@@ -76,6 +76,14 @@ def get_time_line_post():
 TimelinePost.select().order_by(TimelinePost.created_at.desc())
           ]
      }
+
+@app.route('/api/timeline_post', methods=['DELETE'])
+def delete_timeline():
+     id = request.form['id']
+     TimelinePost.delete_by_id(id)
+
+     return ('deleted')
+
 @app.route('/timeline')
 def timeline():
      return render_template("timeline.jinja")
