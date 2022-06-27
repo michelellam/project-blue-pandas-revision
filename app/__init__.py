@@ -82,7 +82,7 @@ def delete_timeline():
      id = request.form['id']
      TimelinePost.delete_by_id(id)
 
-     return ('deleted')
+     return 'deleted'
 
 @app.route('/timeline')
 def timeline():
