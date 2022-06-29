@@ -86,12 +86,12 @@ def delete_timeline():
 
 @app.route('/timeline')
 def timeline():
-     return render_template("timeline.jinja")
+     timeline = TimelinePost.select().order_by(TimelinePost.created_at.desc())
+     return render_template("timeline.jinja", timeline=timeline)
 
 
 if __name__ == "__main__":
      app.run(debug = True)
-
 
 
 
