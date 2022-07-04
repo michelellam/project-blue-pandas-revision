@@ -1,4 +1,5 @@
 import os
+import re
 from flask import Flask, render_template, request,json
 from dotenv import load_dotenv
 from peewee import *
@@ -73,9 +74,17 @@ def post_time_line_post():
      name = request.form['name']
      email = request.form['email']
      content = request.form['content']
-     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
-     return model_to_dict(timeline_post)
+     if name == '' or name is None:
+          return 'Invalid name', 400
+     elif content == '' or content is None:
+          return 'Invalid content', 400
+     elif not re.match(r"[^@]+@[^@]+\.[^@]+",email):
+          return 'Invalud email', 400
+     else:
+          timeline_post = TimelinePost.create(name=name, email=email, content=content)
+
+          return model_to_dict(timeline_post)
 
 @app.route('/api/timeline_post', methods=['GET'])
 def get_time_line_post():
