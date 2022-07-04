@@ -80,7 +80,7 @@ def post_time_line_post():
      elif content == '' or content is None:
           return 'Invalid content', 400
      elif not re.match(r"[^@]+@[^@]+\.[^@]+",email):
-          return 'Invalud email', 400
+          return 'Invalid email', 400
      else:
           timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
@@ -102,6 +102,11 @@ def delete_timeline():
      TimelinePost.delete_by_id(id)
 
      return 'deleted'
+
+@app.route('/api/timeline_post_clear', methods=['DELETE'])
+def clear_timeline():
+     TimelinePost.delete().execute()
+     return 'cleared'
 
 @app.route('/timeline')
 def timeline():
