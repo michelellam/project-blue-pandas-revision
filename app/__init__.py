@@ -6,6 +6,8 @@ from peewee import *
 import datetime
 from playhouse.shortcuts import model_to_dict
 
+load_dotenv()
+app = Flask(__name__, template_folder='template')
 
 if os.getenv("TESTING") == "true":
      print("Running in test mode")
@@ -18,9 +20,6 @@ else:
      port=3306)
 
      print(mydb)
-
-load_dotenv("development.env")
-app = Flask(__name__, template_folder='template')
 
 data = json.load(open('./app/static/data.json'))
 
