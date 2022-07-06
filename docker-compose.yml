@@ -12,7 +12,7 @@ services:
       - MYSQL_USER=myportfolio
       - MYSQL_PASSWORD=mypassword
       - MYSQL_DATABASE=myportfoliodb
-      - MYSQL_ROOT_PASSWORD=michelle
+      - MYSQL_ROOT_PASSWORD= michelle
     ports:
       - "5000:5000"
     volumes:
