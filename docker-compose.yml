@@ -5,7 +5,7 @@ services:
     build: .
     restart: always
     env_file:
-      - ./development.env
+      - development.env
     environment:
       - FLASK_ENV=development
     ports:
@@ -19,7 +19,7 @@ services:
     image: mariadb
     restart: always
     env_file:
-      - ./development.env
+      - development.env
     volumes:
       - mydatabase:/var/lib/mysql
 volumes:
