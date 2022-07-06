@@ -5,14 +5,10 @@ services:
     build: .
     restart: always
     env_file:
-      - .env
+      - ./.env
     environment:
       - FLASK_ENV=development
-      - MYSQL_HOST=mysql
-      - MYSQL_USER=myportfolio
-      - MYSQL_PASSWORD=mypassword
-      - MYSQL_DATABASE=myportfoliodb
-      - MYSQL_ROOT_PASSWORD= michelle
+
     ports:
       - "5000:5000"
     volumes:
@@ -24,7 +20,7 @@ services:
     image: mariadb
     restart: always
     env_file:
-      - .env
+      - ./.env
     volumes:
       - mydatabase:/var/lib/mysql
 volumes:
