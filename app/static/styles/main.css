@@ -171,13 +171,34 @@ body {
     color: #1d539f;
 }
 
-.presentation{
-    min-height: 400px;
-    margin-top: 60px;
-    background-image: url("../img/panda.jpg");
-    background-repeat: repeat;
-    background-color: #EC9D9D;
-    background-blend-mode: screen;
+
+.background{
+    min-height: 300px;
+    margin-top: 0px;
+    background-image: url("../img/plants-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.background-color{
+    background-color:#fbf4f3;
+}
+
+.pictures-with-text{
+    display:grid;
+    padding: 2rem;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui;
+}
+
+.img-index{
+    max-width:100%;
+    height:auto;
 }
 
 .about-img{
