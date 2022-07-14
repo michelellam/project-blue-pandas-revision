@@ -12,9 +12,9 @@ class AppTestCase(unittest.TestCase):
         response = self.client.get("/")
         assert response.status_code == 200
         html = response.get_data(as_text=True)
-        assert "<title>MEET THE TEAM!</title>" in html
-        assert "margin-bottom:70px" in html
-        assert '<hr style="border: 2px solid red; background-color: red;"/>' in html
+        assert "<title>ABOUT ME</title>" in html
+        assert '<meta charset="utf-8">' in html
+        assert '<meta property="og:url" content="localhost:5000">' in html
         
 
     def test_timeline(self):
